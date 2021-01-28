@@ -1,7 +1,15 @@
 from setuptools import setup
 
 requirements = [
-
+    "pytorch",
+    "scikit-image",
+    "pickle",
+    "tqdm",
+    "pillow",
+    "torchvision",
+    "glob",
+    "matplotlib",
+    "numpy"
 ]
 
 setup(name='cornet_irl',
@@ -12,5 +20,4 @@ setup(name='cornet_irl',
       author_email='brodyw@mit.edu',
       install_requires=requirements,
       license='MIT',
-      packages=['funniest'],
       zip_safe=False)
