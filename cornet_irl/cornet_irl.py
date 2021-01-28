@@ -170,13 +170,13 @@ def __cornet_irl(pretrained=None, map_location=None):
     elif pretrained == "cornet_s":
         url = f"https://s3.amazonaws.com/cornet-models/cornet_s-{HASH}.pth"
         ckpt_data =\
-            torch.utils.model_zoo.load_url(url, map_location=map_location)
+            torch.hub.load_state_dict_from_url(url, map_location=map_location)
         model.load_state_dict(ckpt_data['state_dict'], strict=False)
     else:
         assert pretrained == "cornet_irl"
         url = f"https://958.s3.us-east-2.amazonaws.com/FMP_4612_model.pth.tar"
         cornet_irl_data =\
-            torch.utils.model_zoo.load_url(url, map_location=map_location)
+            torch.hub.load_state_dict_from_url(url, map_location=map_location)
         model.load_state_dict(cornet_irl_data['state_dict'], strict=True)
 
     return model
