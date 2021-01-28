@@ -6,8 +6,7 @@ requirements = [
     "tqdm",
     "pillow",
     "torchvision",
-    "glob",
-    "matplotlib",
+    "matplotlib-base",
     "numpy"
 ]
 
