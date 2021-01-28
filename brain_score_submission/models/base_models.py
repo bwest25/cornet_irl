@@ -51,9 +51,10 @@ def get_layers(name):
     :return: a list of strings containing all layers, that should be considered as brain area.
     """
     assert name == "cornet_irl"
-    return ["V1.output", "V2.output", "V4.output", "IT.output",
-            "decoder.output", "normals_branch.nonlin1",
-            "normals_branch.linear2"]
+    # return ["V1.output", "V2.output", "V4.output", "IT.output",
+    #         "decoder.output", "normals_branch.nonlin1",
+    #         "normals_branch.linear2"]
+    return ["V1.output", "V2.output", "V4.output", "IT.output"]
 
 
 def get_bibtex(model_identifier):
