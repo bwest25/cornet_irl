@@ -1,7 +1,7 @@
 from setuptools import setup
 
 requirements = [
-    "pytorch",
+    "torch",
     "scikit-image",
     "tqdm",
     "pillow",
