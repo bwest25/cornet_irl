@@ -3,7 +3,6 @@ from setuptools import setup
 requirements = [
     "pytorch",
     "scikit-image",
-    "pickle",
     "tqdm",
     "pillow",
     "torchvision",
