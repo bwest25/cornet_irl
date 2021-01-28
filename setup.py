@@ -11,7 +11,7 @@ requirements = [
 ]
 
 setup(name='cornet_irl',
-      version='0.1',
+      version='0.2',
       description='CORnet-S but also trained on surface normals',
       url='http://github.com/bwest25/cornet_irl',
       author='Brody West',

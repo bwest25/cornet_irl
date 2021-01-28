@@ -8,7 +8,7 @@ import os
 
 
 HASH = '1d3f7974'
-CORNET_IRL_MODEL_LOCATION = "asdf_asdf_model.pth.tar"
+CORNET_IRL_MODEL_LOCATION = "FMP_4612_model.pth.tar"
 
 
 class Flatten(nn.Module):
@@ -174,7 +174,9 @@ def __cornet_irl(pretrained=None, map_location=None):
         model.load_state_dict(ckpt_data['state_dict'], strict=False)
     else:
         assert pretrained == "cornet_irl"
-        cornet_irl_data = torch.load(CORNET_IRL_MODEL_LOCATION)
+        url = f"https://958.s3.us-east-2.amazonaws.com/FMP_4612_model.pth.tar"
+        cornet_irl_data =\
+            torch.utils.model_zoo.load_url(url, map_location=map_location)
         model.load_state_dict(cornet_irl_data['state_dict'], strict=True)
 
     return model
